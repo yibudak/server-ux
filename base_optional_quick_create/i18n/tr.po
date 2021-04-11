@@ -21,7 +21,7 @@ msgstr ""
 #. module: base_optional_quick_create
 #: model:ir.model.fields,field_description:base_optional_quick_create.field_ir_model__avoid_quick_create
 msgid "Avoid Quick Create"
-msgstr ""
+msgstr "Hızlı Oluşturmayı iptal et"
 
 #. module: base_optional_quick_create
 #: code:addons/base_optional_quick_create/models/ir_model.py:21
@@ -30,6 +30,9 @@ msgid ""
 "Can't create %s with name %s quickly.\n"
 "Please contact your system administrator to disable this behaviour."
 msgstr ""
+"Hızlı oluşturma %s isim %s yasaklanmış.\n"
+"Lütfen bunu değiştirmek için sistem yöneticinize başvurun."
+
 
 #. module: base_optional_quick_create
 #: model:ir.model,name:base_optional_quick_create.model_ir_model
