@@ -4,6 +4,7 @@
 from lxml import etree
 
 from odoo import _, api, models
+from datetime import datetime
 
 
 class MassEditingWizard(models.TransientModel):
@@ -158,6 +159,9 @@ class MassEditingWizard(models.TransientModel):
                             m2m_list.append((4, m2m_id))
                         values.update({split_key: m2m_list})
             if values:
+                # Also update write_date if it exists
+                if hasattr(TargetModel, "write_date"):
+                    values["write_date"] = datetime.now()
                 TargetModel.browse(active_ids).write(values)
         return super().create({})
 
